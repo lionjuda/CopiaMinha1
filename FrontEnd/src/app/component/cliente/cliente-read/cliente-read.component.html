@@ -1,0 +1,72 @@
+<!-- Container com elevação para exibir a tabela -->
+<div class="mat-elevation-z4">
+
+  <div class="scrollable-form">
+  <!-- Tabela Angular Material com fonte de dados vinculada ao array 'cliente' -->
+  <table mat-table [dataSource]="clientes">
+    
+    <!-- Coluna de Id -->
+    <ng-container matColumnDef="cliId">
+      <th mat-header-cell *matHeaderCellDef>Id</th> <!-- Cabeçalho da coluna -->
+      <td mat-cell *matCellDef="let row">{{row.cliId}}</td> <!-- Dados da célula -->
+    </ng-container>
+
+    <!-- Coluna de Nome -->
+    <ng-container matColumnDef="cliNome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th> <!-- Cabeçalho da coluna -->
+      <td mat-cell *matCellDef="let row">{{row.cliNome}}</td> <!-- Dados da célula -->
+    </ng-container>
+
+    <!-- Coluna de CPF -->
+    <ng-container matColumnDef="cliCpf">
+      <th mat-header-cell *matHeaderCellDef>CPF</th> <!-- Cabeçalho da coluna -->
+      <!-- UTILIZAÇÃO DE PIPES -->
+      <td mat-cell *matCellDef="let row">{{row.cliCpf}}</td> <!-- Dados da célula -->
+    </ng-container>
+
+    <!-- Coluna de E-mail -->
+    <ng-container matColumnDef="conEmail">
+      <th mat-header-cell *matHeaderCellDef>E-mail</th> <!-- Cabeçalho da coluna -->
+      <!-- UTILIZAÇÃO DE PIPES -->
+      <td mat-cell *matCellDef="let row">{{row.conEmail}}</td> <!-- Dados da célula -->
+    </ng-container>
+
+    <!-- Coluna de Telefone -->
+    <ng-container matColumnDef="conCelular">
+      <th mat-header-cell *matHeaderCellDef>Celular</th> <!-- Cabeçalho da coluna -->
+      <!-- UTILIZAÇÃO DE PIPES -->
+      <td mat-cell *matCellDef="let row">{{row.conCelular}}</td> <!-- Dados da célula -->
+    </ng-container>
+
+    <ng-container matColumnDef="conTelefoneComercial">
+      <th mat-header-cell *matHeaderCellDef>Telefone Comercial</th>
+
+      <td mat-cell *matCellDef="let row">{{row.conTelefoneComercial}}</td>
+    </ng-container>
+
+    <!-- Coluna de Ações -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Ações</th> <!-- Cabeçalho da coluna -->
+      <td mat-cell *matCellDef="let row">
+          <!-- Link para editar o cliente -->
+          <a routerLink="/clientes/update/{{ row.cliId }}" class="edit">
+              <i class="material-icons">
+                  edit
+              </i>
+          </a>
+          <!-- Link para deletar o cliente -->
+          <a routerLink="/clientes/delete/{{ row.cliId }}" class="delete">
+              <i class="material-icons">
+                  delete
+              </i>
+          </a>
+      </td>
+    </ng-container>
+
+    <!-- Linha de cabeçalho da tabela -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <!-- Linha de dados da tabela -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  </div>
+</div>

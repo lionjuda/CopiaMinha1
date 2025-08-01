@@ -1,0 +1,48 @@
+<mat-sidenav-container class="container">
+    <!-- Barra lateral fixa com links de navegação -->
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <!-- Link para a página inicial -->
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">home</i>
+                Início
+            </a>
+            <!-- Link para a página de produtos -->
+            <a mat-list-item routerLink="/products">
+                <i class="material-icons">storefront</i>
+                Produtos
+            </a>
+            <!-- Link para a página de cliente -->
+            <a mat-list-item routerLink="/clientes">
+                <i class="material-icons">person</i> 
+                Cliente
+            </a>
+            <!-- Link para a página de fornecedor -->
+            <a mat-list-item routerLink="/fornecedor">
+                <i class="material-icons">business</i> 
+                Fornecedor
+            </a>
+            <!-- Link para a página de contato -->
+            <a mat-list-item routerLink="/contato">
+                <i class="material-icons">contacts</i> 
+                Contato
+            </a>
+            
+            <!-- Link para a página de venda -->
+            <a mat-list-item routerLink="/vendas">
+                <i class="material-icons">sell</i>
+                Venda
+            </a>
+
+            <!-- Link para a página de pagamentos -->
+            <a mat-list-item routerLink="/formaPagamento">
+                <i class="material-icons">payments</i> 
+                Pagamentos
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <!-- Conteúdo principal da página -->
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

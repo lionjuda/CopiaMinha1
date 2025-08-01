@@ -1,0 +1,76 @@
+<mat-card class="venda-card">
+  <mat-card-title>Criar Venda</mat-card-title>
+
+  <div class="card-scrollable-content">
+    <form [formGroup]="vendaForm" (ngSubmit)="onSubmit()">
+      <div class="form-columns">
+
+        <mat-form-field>
+          <input matInput placeholder="Código da Venda" formControlName="vendaCodigo" readonly>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker1" placeholder="Data da Venda" formControlName="vendaData" readonly>
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Cliente" formControlName="cliId" required>
+            <mat-option value="" disabled>Selecione um cliente</mat-option>
+            <mat-option *ngFor="let c of clientes" [value]="c.cliId">{{ c.cliNome }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Forma de Pagamento" formControlName="fpgId" required>
+            <mat-option value="" disabled>Selecione uma forma</mat-option>
+            <mat-option *ngFor="let f of formasPagamento" [value]="f.fpgId">{{ f.fpgDescricao }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+      <div formArrayName="compras" class="compras-container">
+        <div *ngFor="let compra of compras.controls; let i = index" [formGroupName]="i" class="produto-bloco form-columns">
+
+          <mat-form-field>
+            <mat-select placeholder="Produto" formControlName="proId" (selectionChange)="onProdutoChange(i)" required>
+              <mat-option value="" disabled>Selecione um produto</mat-option>
+              <mat-option *ngFor="let p of products" [value]="p.proId">{{ p.proNome }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Quantidade</mat-label>
+            <input matInput type="number" formControlName="compraQuantidade" min="1">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Preço de Venda (R$)</mat-label>
+            <input matInput type="number" formControlName="compraPrecoVenda" step="0.01" min="0">
+          </mat-form-field>
+
+          <div class="botoes-produto">
+            <button mat-stroked-button color="warn" type="button" (click)="removeCompra(i)" *ngIf="compras.length > 1">
+              Remover Produto
+            </button>
+            <button mat-raised-button color="primary" type="button" (click)="addCompra()" *ngIf="i === compras.length - 1">
+              Adicionar Produto
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="botoes-finais">
+    <button mat-raised-button color="primary" type="submit" [disabled]="vendaForm.invalid" (click)="onSubmit()">
+      Salvar
+    </button>
+    <button mat-raised-button color="warn" type="button" (click)="cancel()">
+      Cancelar
+    </button>
+  </div>
+</mat-card>

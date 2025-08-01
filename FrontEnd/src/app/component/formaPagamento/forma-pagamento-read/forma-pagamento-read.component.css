@@ -1,0 +1,89 @@
+/* Fundo do container com degradê escuro */
+.mat-elevation-z4 {
+  background: linear-gradient(to bottom right, #7c573c, #4b321a); /* Marrom escuro elegante */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo da tabela */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #815b40; /* Marrom médio */
+}
+
+/* Cabeçalho */
+th {
+  background-color: #6b4f3a; /* Marrom mais escuro */
+  color: #F5EBDD; /* Creme claro (mesma dos botões) */
+  font-weight: bold;
+  padding: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Células */
+td {
+  padding: 14px 16px;
+  color: #f0e6dd;
+  border-bottom: 1px solid #8a6245; /* Linha mais clara */
+}
+
+/* Hover na linha inteira */
+table tr:hover {
+  background-color: #a67b5b; /* Marrom mais claro no hover */
+  cursor: pointer;
+}
+
+/* Ícones */
+.edit > i,
+.delete > i {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* Ícone editar */
+.edit > i {
+  color: #85b13f;
+}
+
+/* Ícone deletar */
+.delete > i {
+  color: #b8281e;
+}
+
+/* Hover ícones */
+.edit > i:hover,
+.delete > i:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
+
+/* Scrollbar para área com rolagem */
+.scrollable-form {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #8a6245 #3e2c1e;
+}
+
+.scrollable-form {
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 15px;
+  border-radius: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #866149 transparent;
+}
+
+.scrollable-form::-webkit-scrollbar {
+  width: 12px;
+}

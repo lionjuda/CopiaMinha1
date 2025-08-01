@@ -1,0 +1,104 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão Angular Material */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* Container centralizado para formulário de Produto */
+.container-formulario-produto {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px 120px; /* Espaçamento superior e inferior */
+  min-height: 100vh;
+  background: #fef8f1;
+}
+
+/* Card responsivo do Produto */
+mat-card.produto-card {
+  width: 90%;
+  max-width: 500px;
+  max-height: calc(100vh - 160px); /* Para não cortar o card */
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título do Produto */
+mat-card-title.produto-titulo {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #6b4f3a;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Campos do Produto */
+mat-form-field.produto-campo {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* Botões de Produto */
+button.produto-botao {
+  background: linear-gradient(90deg, #8a6245 250px, #815b40);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  color: #F5EBDD;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(92, 58, 26, 0.4);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Hover e Active */
+button.produto-botao:hover {
+  background: linear-gradient(90deg,#815b40 2%, #8a6245);
+  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  transform: translateY(-2px);
+}
+
+button.produto-botao:active {
+  transform: scale(0.95);
+}
+
+/* Área rolável para Produto */
+.scrollable-form-produto {
+  max-height: calc(100vh - 280px);
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* Barra de rolagem personalizada */
+.scrollable-form-produto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-form-produto::-webkit-scrollbar-thumb {
+  background: #b89b87;
+  border-radius: 10px;
+}
+
+.scrollable-form-produto::-webkit-scrollbar-track {
+  background: #f0e6dd;
+}

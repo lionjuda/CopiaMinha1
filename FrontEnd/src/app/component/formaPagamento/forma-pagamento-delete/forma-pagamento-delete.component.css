@@ -1,0 +1,104 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mantém a fonte padrão do Angular Material, sem sobrescrever */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Roboto, Arial, sans-serif; /* Volta para padrão do Material */
+}
+
+/* Container centralizado com espaçamento maior para não colar no footer */
+.container-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px 120px; /* Aumenta topo e base para centralizar melhor */
+  min-height: 100vh;
+  background: #fef8f1;
+}
+
+/* Card responsivo */
+mat-card {
+  width: 90%;
+  max-width: 500px;
+  max-height: calc(100vh - 160px); /* Evita cortar e mantém espaço */
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título */
+mat-card-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #6b4f3a;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Campos */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* Botões */
+button {
+  background: linear-gradient(90deg, #8a6245 250px, #815b40);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  color: #F5EBDD;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(92, 58, 26, 0.4);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Hover e active */
+button:hover {
+  background: linear-gradient(90deg,#815b40 2%, #8a6245);
+  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Área rolável interna */
+.scrollable-form {
+  max-height: calc(100vh - 280px); /* Mais espaço para não ficar colado */
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* Barra de rolagem personalizada */
+.scrollable-form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-form::-webkit-scrollbar-thumb {
+  background: #b89b87;
+  border-radius: 10px;
+}
+
+.scrollable-form::-webkit-scrollbar-track {
+  background: #f0e6dd;
+}

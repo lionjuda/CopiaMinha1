@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Atualizar Contato</mat-card-title>
+  <div class="scrollable-form">
+    <form>
+      <!-- Campos -->
+      <mat-form-field>
+        <input matInput placeholder="Telefone Comercial" [(ngModel)]="contato.conTelefoneComercial" name="conTelefoneComercial" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Celular" [(ngModel)]="contato.conCelular" name="conCelular" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="E-mail" [(ngModel)]="contato.conEmail" name="conEmail" required>
+      </mat-form-field>
+
+      <!-- Botões lado a lado -->
+      <button mat-raised-button color="primary" (click)="updateContato()">
+        Atualizar
+      </button>
+      <button mat-stroked-button color="warn" (click)="cancel()">
+        Cancelar
+      </button>
+    </form>
+  </div>
+</mat-card>

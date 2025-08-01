@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Excluir Contato</mat-card-title>
+  <div class="scrollable-form">
+    <form>
+      <!-- Campos somente leitura (disabled) -->
+      <mat-form-field>
+        <input matInput placeholder="Telefone Comercial" [value]="contato.conTelefoneComercial" name="conTelefoneComercial" disabled>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Celular" [value]="contato.conCelular" name="conCelular" disabled>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="E-mail" [value]="contato.conEmail" name="conEmail" disabled>
+      </mat-form-field>
+
+      <!-- Botões lado a lado -->
+      <button mat-raised-button color="warn" (click)="deleteContato()">
+        Excluir
+      </button>
+      <button mat-stroked-button color="primary" (click)="cancel()">
+        Cancelar
+      </button>
+    </form>
+  </div>
+</mat-card>

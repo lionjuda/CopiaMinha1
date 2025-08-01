@@ -1,0 +1,65 @@
+<!-- Card que contém o formulário para criar um novo cliente -->
+<mat-card>
+  <!-- Título do card -->
+  <mat-card-title class="titulo">Excluir Cliente</mat-card-title>
+  <div class="scrollable-form">
+  <form>
+    
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="cliente.cliNome" name="cliNome" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>CPF</mat-label>
+      <input matInput [(ngModel)]="cliente.cliCpf" name="cliCpf" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Rua</mat-label>
+      <input matInput [(ngModel)]="cliente.endRua" name="endRua" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Número</mat-label>
+      <input matInput [(ngModel)]="cliente.endNumero" name="endNumero" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Cidade</mat-label>
+      <input matInput [(ngModel)]="cliente.endCidade" name="endCidade" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>CEP</mat-label>
+      <input matInput [(ngModel)]="cliente.endCep" name="endCep" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Estado</mat-label>
+      <input matInput [(ngModel)]="cliente.endEstado" name="endEstado" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Celular</mat-label>
+      <input matInput [(ngModel)]="cliente.conCelular" name="conCelular" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Telefone Comercial</mat-label>
+      <input matInput [(ngModel)]="cliente.conTelefoneComercial" name="conTelefoneComercial" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input matInput [(ngModel)]="cliente.conEmail" name="conEmail" disabled>
+    </mat-form-field>
+
+    <!-- Botões -->
+    <div class="botoes">
+      <button mat-raised-button color="primary" (click)="deleteCliente()">Excluir</button>
+      <button mat-stroked-button color="warn" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+  </div>
+</mat-card>

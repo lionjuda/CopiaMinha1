@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Layout Semântico</title>
+</head>
+<body>
+  <div class="container">
+    <main class="main-content">
+      <header class="header">
+        <h1>Bem-vindo ao Sistema de Gestões!</h1>
+        <p>Sistema de Gestão Paulo's Breads.</p>
+      </header>
+
+      <section class="dashboard" aria-label="Resumo de dados">
+
+        <a class="card" routerLink="/products">
+          <span class="icon-bg material-icons">storefront</span>
+          <div class="card-content">
+            <i class="material-icons">storefront</i>
+            <h2>Produtos</h2>
+            <span class="counter">{{ productCount }}</span>
+          </div>
+        </a>
+
+        <a class="card" routerLink="/clientes">
+          <span class="icon-bg material-icons">person</span>
+          <div class="card-content">
+            <i class="material-icons">person</i>
+            <h2>Clientes</h2>
+            <span class="counter">{{ clienteCount }}</span>
+          </div>
+        </a>
+
+        <a class="card" routerLink="/fornecedor">
+          <span class="icon-bg material-icons">business</span>
+          <div class="card-content">
+            <i class="material-icons">business</i>
+            <h2>Fornecedores</h2>
+            <span class="counter">{{ fornecedorCount }}</span>
+          </div>
+        </a>
+
+        <a class="card" routerLink="/contato">
+          <span class="icon-bg material-icons">contacts</span>
+          <div class="card-content">
+            <i class="material-icons">contacts</i>
+            <h2>Contatos</h2>
+            <span class="counter">{{ contatoCount }}</span>
+          </div>
+        </a>
+
+        <a class="card" routerLink="/vendas">
+          <span class="icon-bg material-icons">sell</span>
+          <div class="card-content">
+            <i class="material-icons">sell</i>
+            <h2>Vendas</h2>
+            <span class="counter">{{ vendaCount }}</span>
+          </div>
+        </a>
+
+        <a class="card" routerLink="/formaPagamento">
+          <span class="icon-bg material-icons">payments</span>
+          <div class="card-content">
+            <i class="material-icons">payments</i>
+            <h2>Pagamentos</h2>
+            <span class="counter">{{ formaPagamentoCount }}</span>
+          </div>
+        </a>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>

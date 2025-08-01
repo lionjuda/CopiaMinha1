@@ -1,0 +1,169 @@
+/* Card com altura máxima e rolagem interna */
+mat-card.venda-card {
+  width: 90%;
+  max-width: 800px;
+  max-height: calc(100vh - 160px); /* Evita cortar e mantém espaço */
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Área interna com rolagem */
+.card-scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Layout em duas colunas */
+.form-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.form-columns mat-form-field {
+  flex: 1 1 calc(50% - 10px);
+}
+
+/* Estiliza o formulário para usar layout flexível em coluna */
+form {
+  display: flex; 
+  flex-direction: column;
+}
+
+/* Botões padrão */
+button {
+  background: linear-gradient(90deg, #8a6245 250px, #815b40);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  color: #F5EBDD;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(92, 58, 26, 0.4);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Hover e active */
+button:hover {
+  background: linear-gradient(90deg,#815b40 2%, #8a6245);
+  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Estilo do título */
+mat-card-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #6b4f3a;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Campos */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* Botão Angular Material */
+button.mat-raised-button {
+  background-color: #8a6245;
+  color: #F5EBDD;
+  transition: background-color 0.3s;
+}
+
+button.mat-raised-button:hover {
+  background-color: #6b4f3a;
+}
+
+/* Barra de rolagem personalizada (opcional) */
+.card-scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-scrollable-content::-webkit-scrollbar-thumb {
+  background: #b89b87;
+  border-radius: 10px;
+}
+
+.card-scrollable-content::-webkit-scrollbar-track {
+  background: #f0e6dd;
+}
+
+/* Remove margens genéricas do botão para evitar espaçamentos duplicados */
+.botoes-produto button {
+  margin: 0; /* remove margens */
+  padding: 0.75rem 1.5rem;
+  flex: none;
+  white-space: nowrap;
+  width: auto;
+  max-width: none;
+}
+
+/* Ajusta a margem do container de botões para controlar o espaçamento */
+.botoes-produto {
+  margin-top: -35px;   /* distância pequena para o campo acima */
+  margin-bottom: 30px; /* distância maior para separar do próximo bloco */
+  display: flex;
+  gap: 15px;
+}
+
+/* Botões finais lado a lado e maiores */
+.botoes-finais {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* centraliza os botões */
+  margin-top: 20px;
+}
+
+.botoes-finais button {
+  flex: 1;
+  max-width: 250px;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 18px;
+  width: auto;
+}
+
+/* Responsividade para telas médias e pequenas */
+
+/* Ajusta max-width do card para telas até 1200px */
+@media (max-width: 1200px) {
+  mat-card.venda-card {
+    max-width: 700px; /* Diminui o max-width para se adaptar melhor em telas menores */
+  }
+}
+
+/* Ajustes para telas pequenas até 768px (tablets, celulares maiores) */
+@media (max-width: 768px) {
+  mat-card.venda-card {
+    width: 95%;      /* Aumenta a largura para 95% para melhor aproveitamento da tela pequena */
+    padding: 1.5rem; /* Diminui o padding para não ficar muito espaçado */
+  }
+
+  /* Cada campo do formulário ocupa 100% da largura */
+  .form-columns mat-form-field {
+    flex: 1 1 100%;
+  }
+
+  /* Botões finais empilhados verticalmente com espaçamento */
+  .botoes-finais {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

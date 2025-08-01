@@ -1,0 +1,17 @@
+<main>
+  <div class="top-bar">
+    <button mat-raised-button (click)="navigateToVendaCreate()" color="primary">
+      Nova Venda
+    </button>
+
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterVendas()"
+      placeholder="Buscar vendas..."
+      class="pesquisa"
+    />
+  </div>
+
+  <app-venda-read [vendas]="vendaFilter"></app-venda-read>
+</main>

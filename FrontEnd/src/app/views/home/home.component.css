@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  padding: 2.5vh;
+  background: #fef8f1;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 2vh;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;      /* Permite apenas rolagem vertical se necessário */
+  overflow-x: hidden;    /* Evita rolagem horizontal ao dar hover */
+  max-width: 80%; 
+  margin: 0 auto;
+  background: #fef8f1;
+  height: 75vh; /* Expande mais para baixo ocupando 90% da altura da viewport */
+  padding: 0 1vw; /* <-- adiciona espaço invisível nas laterais para o "scale" caber */
+}
+
+.header {
+  border-bottom: 0.3vh solid #d4c1aa;
+  padding-bottom: 1.5vh;
+  margin-bottom: 2vh;
+}
+
+.header h1 {
+  color: #3b2b23;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0.5vh;
+}
+
+.header p {
+  color: #5e4a3a;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: white;
+  height: 27vh;
+  padding: 2.2vh 2vw;
+  border-radius: 1vh;
+  position: relative;
+  box-shadow: 0.5vh 0.5vh 0 0 #d4c1aa;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  flex: 1 1 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vh;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ajusta o hover com sombra e transformação */
+.card:hover {
+  box-shadow: 0 1.5vh 2vh rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px) scale(1.02); /* menos "zoom" e menos deslocamento */
+}
+
+/* Força o link <a> dentro do card a ocupar todo o card e estilizar textos */
+.card > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2vh;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* Ícone style */
+.material-icons {
+  font-size: 2.7em;
+  color: #3b2b23;
+  margin-bottom: 1.5vh;
+  flex-shrink: 0;
+}
+
+.card h2 {
+  font-size: 1.9em;
+  font-weight: 600;
+  margin: 0 0 1.2vh 0;
+  position: static;
+  color: #3b2b23;
+}
+
+.card p {
+font-size: 1em;
+color: #6b5b4b;
+margin: 0;
+}
+
+.counter {
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #3b2b23;
+  margin-top: 1vh;
+  display: block;
+  line-height: 1.2;
+}
+
+.icon-bg {
+  position: absolute;
+  bottom: -3%;
+  right: 5%;
+  font-size: clamp(3rem, 15vw, 10rem);;
+  opacity: 0.07;
+  color: #3b2b23;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}

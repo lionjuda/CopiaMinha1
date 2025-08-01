@@ -1,0 +1,49 @@
+/* Estilo da barra lateral */
+.sidenav {
+    background: linear-gradient(180deg, #7c573c 0%, #4b321a 100%);
+    width: 200px; /* Largura fixa */
+    height: 100%; /* Para ocupar toda a altura */
+    box-sizing: border-box;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Para dar uma leve sombra à barra lateral */
+    top: 60px; /* logo abaixo do header */
+    position: fixed; /* ou absolute */
+    z-index: 50;
+}
+
+/* Estilo dos links na barra lateral */
+.sidenav a.mat-list-item {
+    color: #fff; /* Texto branco */
+    padding: 10px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-radius: 0; /* Sem borda inicialmente */
+    margin: 0; /* Sem margem inicialmente */
+}
+
+/* Espaçamento entre ícones e texto nos links */
+.sidenav i.material-icons {
+    color: #000000; /* Ícones pretos */
+    padding-right: 10px;
+}
+
+/* Efeito de brilho ao passar o mouse nos links */
+.sidenav a.mat-list-item:hover {
+    background-color: #6b4f3a; /* Leve alteração na cor de fundo */
+    font-size: 16px; /* Aumenta fonte no hover */
+    border-radius: 5px; /* Bordas arredondadas no hover */
+    margin: 5px 0; /* Margem vertical no hover */
+    padding: 10px;    
+    height: 40px; /* Altura fixa */
+    width: 100%; /* Largura total */
+    cursor: pointer;
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    padding: 15px; /* Espaçamento interno */
+    background-color: #F5EBDD; /* Fundo claro */
+    box-sizing: border-box;
+}

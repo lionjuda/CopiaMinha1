@@ -1,0 +1,94 @@
+/* ==== BOTÃO "NOVO FORNECEDOR" COM TONS MARRONS ==== */
+button {
+    background: linear-gradient(145deg, #8b5e3c, #5c3a1a); /* Marrom médio para escuro */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.15rem;
+    color: #F5EBDD;
+    border-radius: 14px;
+    box-shadow: 0 6px 12px rgba(92, 58, 26, 0.4);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    letter-spacing: 0.03em;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #5c3a1a, #8b5e3c); /* Inversão no hover */
+    box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+    transform: translateY(-2px);
+}
+
+
+/* ==== CAMPO DE PESQUISA COM VISUAL MAIS TERROSO ==== */
+.pesquisa {
+    padding: 0.75rem 1.2rem;
+    border: 2px solid #b98e68; /* Marrom claro */
+    border-radius: 10px;
+    background-color: #e6d3c3; /* Bege/marrom muito claro */
+    color: #5c3a1a; /* Marrom escuro */
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pesquisa::placeholder {
+    color: #5c3a1a;
+    opacity: 0.7;
+}
+
+.pesquisa:focus {
+    border-color: #8b5e3c; /* Marrom médio */
+    box-shadow: 0 0 10px rgba(92, 58, 26, 0.4);
+}
+
+
+/* ==== CONTAINER PRINCIPAL ==== */
+main {
+    background: white;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    border-radius: 20px;
+    padding: 2.5rem 3rem 3rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    user-select: none;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.top-bar .pesquisa {
+    flex: 1 1 70%;
+    width: 100%;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .pesquisa {
+        width: 100%;
+    }
+}

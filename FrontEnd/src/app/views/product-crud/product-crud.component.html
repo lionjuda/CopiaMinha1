@@ -1,0 +1,17 @@
+<main>
+  <div class="top-bar">
+    <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
+      Novo Produto
+    </button>
+
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterProducts()"
+      placeholder="Buscar produto..."
+      class="pesquisa"
+    />
+  </div>
+
+  <app-product-read [products]="filteredProducts"></app-product-read>
+</main>
