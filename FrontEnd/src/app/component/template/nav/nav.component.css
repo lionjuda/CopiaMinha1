@@ -1,49 +1,95 @@
+/* Remova o @import do CSS, pois agora usamos o <link> no HTML */
+
 /* Estilo da barra lateral */
 .sidenav {
-    background: linear-gradient(180deg, #7c573c 0%, #4b321a 100%);
-    width: 200px; /* Largura fixa */
-    height: 100%; /* Para ocupar toda a altura */
+    background: linear-gradient(135deg, #c9a11c 0%, #2727aa 100%);
+    background-size: 200% 200%;
+    width: 200px;
+    height: 100%;
     box-sizing: border-box;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Para dar uma leve sombra à barra lateral */
-    top: 60px; /* logo abaixo do header */
-    position: fixed; /* ou absolute */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    top: 60px;
+    position: fixed;
     z-index: 50;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Orbitron', sans-serif; /* Assegure que a fonte está correta */
 }
 
 /* Estilo dos links na barra lateral */
 .sidenav a.mat-list-item {
-    color: #fff; /* Texto branco */
-    padding: 10px; /* Espaçamento interno */
-    text-decoration: none; /* Remove sublinhado */
+    color: #fd8f00;
+    padding: 10px;
+    text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 14px;
+    font-family: 'Orbitron', sans-serif; /* Assegure que a fonte está correta */
     transition: all 0.3s ease;
-    border-radius: 0; /* Sem borda inicialmente */
-    margin: 0; /* Sem margem inicialmente */
-}
-
-/* Espaçamento entre ícones e texto nos links */
-.sidenav i.material-icons {
-    color: #000000; /* Ícones pretos */
-    padding-right: 10px;
-}
-
-/* Efeito de brilho ao passar o mouse nos links */
-.sidenav a.mat-list-item:hover {
-    background-color: #6b4f3a; /* Leve alteração na cor de fundo */
-    font-size: 16px; /* Aumenta fonte no hover */
-    border-radius: 5px; /* Bordas arredondadas no hover */
-    margin: 5px 0; /* Margem vertical no hover */
-    padding: 10px;    
-    height: 40px; /* Altura fixa */
-    width: 100%; /* Largura total */
-    cursor: pointer;
+    border-radius: 0;
+    margin: 0;
 }
 
 /* Estilo do conteúdo principal */
 .content {
-    padding: 15px; /* Espaçamento interno */
-    background-color: #F5EBDD; /* Fundo claro */
-    box-sizing: border-box;
+    padding: 20px;
+    background: linear-gradient(135deg, #c9a11c 0%, #2727aa 100%);
+    min-height: calc(100vh - 64px);
+    color: #fff;
+    margin-left: 200px;
+    font-family: 'Orbitron', sans-serif; /* Aplicando a fonte ao conteúdo, se desejado */
+}
+
+/* Restante do CSS permanece igual */
+.sidenav i.material-icons {
+    color: #000000;
+    padding-right: 10px;
+    font-size: 24px;
+    position: relative;
+}
+
+.sidenav a.mat-list-item:hover {
+    background-color: #6b4f3a;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.gira-simples {
+    transition: transform 0.6s ease;
+}
+
+.gira-simples:hover {
+    transform: rotate(360deg);
+}
+
+.gira-3d {
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.gira-3d:hover {
+    transform: rotateY(180deg);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }

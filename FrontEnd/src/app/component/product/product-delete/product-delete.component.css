@@ -42,7 +42,7 @@ mat-card.produto-card {
 mat-card-title.produto-titulo {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #6b4f3a;
+  color: #3a436b;
   text-align: center;
   font-weight: bold;
 }
@@ -55,7 +55,7 @@ mat-form-field.produto-campo {
 
 /* Botões de Produto */
 button.produto-botao {
-  background: linear-gradient(90deg, #8a6245 250px, #815b40);
+  background: linear-gradient(90deg, #0084ff, #e05c04);
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
@@ -71,8 +71,7 @@ button.produto-botao {
 
 /* Hover e Active */
 button.produto-botao:hover {
-  background: linear-gradient(90deg,#815b40 2%, #8a6245);
-  box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
+  background-color: #303f9f;
   transform: translateY(-2px);
 }
 
@@ -95,10 +94,10 @@ button.produto-botao:active {
 }
 
 .scrollable-form-produto::-webkit-scrollbar-thumb {
-  background: #b89b87;
+  background: #6e6864;
   border-radius: 10px;
 }
 
 .scrollable-form-produto::-webkit-scrollbar-track {
-  background: #f0e6dd;
+  background: #cfcbc6;
 }

@@ -1,6 +1,6 @@
 /* ==== BOTÃO "NOVO FORNECEDOR" COM TONS MARRONS ==== */
 button {
-    background: linear-gradient(145deg, #8b5e3c, #5c3a1a); /* Marrom médio para escuro */
+    background: linear-gradient(90deg, #0084ff, #e05c04);
     border: none;
     padding: 0.75rem 2rem;
     font-size: 1.15rem;
@@ -16,23 +16,38 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 200px;
+    min-width: 640px;
 }
 
 button:hover {
-    background: linear-gradient(145deg, #5c3a1a, #8b5e3c); /* Inversão no hover */
-    box-shadow: 0 10px 22px rgba(92, 58, 26, 0.6);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 84, 255, 0.6);
+    background-image: linear-gradient(90deg, #ff00cc, #00ffff, #ff00cc);
+    transform: scale(1.03);
+    animation: textGradientMove 2s linear infinite;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% auto;
 }
 
+@keyframes textGradientMove {
+    0% {
+      background-position: 0% center;
+    }
+  
+    100% {
+      background-position: 200% center;
+    }
+  }
 
 /* ==== CAMPO DE PESQUISA COM VISUAL MAIS TERROSO ==== */
 .pesquisa {
     padding: 0.75rem 1.2rem;
-    border: 2px solid #b98e68; /* Marrom claro */
+    border: 2px solid #68b6b9; /* Marrom claro */
     border-radius: 10px;
-    background-color: #e6d3c3; /* Bege/marrom muito claro */
-    color: #5c3a1a; /* Marrom escuro */
+    background-color: #ffffff; /* Bege/marrom muito claro */
+    color: #ffffff; /* Marrom escuro */
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -40,19 +55,19 @@ button:hover {
 }
 
 .pesquisa::placeholder {
-    color: #5c3a1a;
+    color: #000000;
     opacity: 0.7;
 }
 
 .pesquisa:focus {
-    border-color: #8b5e3c; /* Marrom médio */
+    border-color: #000000; /* Marrom médio */
     box-shadow: 0 0 10px rgba(92, 58, 26, 0.4);
 }
 
 
 /* ==== CONTAINER PRINCIPAL ==== */
 main {
-    background: white;
+    background: linear-gradient(135deg, #121212 0%, #14142b 100%);
     max-width: 1200px;
     margin: auto;
     width: 100%;
